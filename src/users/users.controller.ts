@@ -21,7 +21,7 @@ export class UsersController {
   @Get('me')
   @UseGuards(AuthGuard('jwt'))
   myAccount(@LoggedInUser() data: JwtPayload) {
-    console.log('LOGGED: KURWA JUSER CHUJE!!!!!!!!!!', data);
+    console.log('LOGGED: user data', data);
     return data;
   }
   // @Post(
